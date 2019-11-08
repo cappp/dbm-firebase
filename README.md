@@ -1,1 +1,1 @@
-# DBM Firebase
+# <img src="https://silversunset.net/dbm/favicon.ico" width="30px"> Discord Bot Maker Firebase <img src="https://www.gstatic.com/devrel-devsite/v8f8534a0a1ecc2d4b6b0eedc98ca141494b3da7c06f14d0cf00ab540f6319b4f/firebase/images/favicon.png">
