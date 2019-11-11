@@ -17,7 +17,7 @@ We will first start by doing what is necessary.
 
 ![](https://i.imgur.com/8ykgybu.png)
 
-**4.** Create a new app and do what you want.
+**4.** Create a new web app and do what ask.
 
 ![](https://i.imgur.com/mVnfFtY.png)
 
