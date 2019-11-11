@@ -86,7 +86,7 @@ You must replace each **X** for such a thing as you are saying and then just sav
 
 # Oh yeah!
 
-Now your Firebase database is registered and you can now use the control, check, store and delete mods to use your DB in your DBM bot!
+Now your Firebase database is registered and you can now use the control, check, store and delete mods to control servers, members, and globally your DB in your DBM bot!
 
 > **You can use the following mods:**
 
