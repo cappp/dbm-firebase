@@ -2,6 +2,8 @@
 
 Use the Firebase database on DBM easily and completely. You will be able to control your Firebase DB using the mods I made for DBM that are very easy to use.
 
+> This is one of my contributions to [DBM Mods](https://github.com/Discord-Bot-Maker-Mods/DBM-Mods).
+
 ## Getting started
 
 We will first start by doing what is necessary.
