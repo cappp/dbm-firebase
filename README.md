@@ -2,7 +2,7 @@
 
 Use the Firebase database on DBM easily and completely. You will be able to control your Firebase DB using the mods I made for DBM that are very easy to use.
 
-# Getting started
+## Getting started
 
 We will first start by doing what is necessary.
 
@@ -25,7 +25,7 @@ We will first start by doing what is necessary.
 
 All done so far. Let's continue.
 
-# Configuring DBM bot
+## Configuring DBM bot
 
 Now we will prepare your bot to start using the service. Look carefully.
 
@@ -59,7 +59,7 @@ Looking at the folders, there will be the folder **"actions"** and **"data"**, i
 ```
 You must replace each **X** for such a thing as you are saying and then just save.
 
-#### Where to find the X values ​​of my Firebase project?
+#### Where to find the X values of my Firebase project?
 
 **1.** Access your chosen Firebase project.<br>
 **2.** Go to where your project settings are.
@@ -70,7 +70,7 @@ You must replace each **X** for such a thing as you are saying and then just sav
 
 ![](https://i.imgur.com/3JHCaLW.png)
 
-# Creating database
+## Creating database
 
 **1.** In the main part of your Firebase project, select from the **"Database"** side menu.
 
@@ -102,3 +102,6 @@ Now your Firebase database is registered and you can now use the control, check,
 - Delete Firebase Server Data
 - Delete Firebase Member Data
 - Delete Firebase Global Data
+
+### License
+MIT - [CapOliveiraBr](https://github.com/CapOliveiraBr)
