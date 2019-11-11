@@ -31,7 +31,7 @@ All done so far. Let's continue.
 
 Now we will prepare your bot to start using the service. Look carefully.
 
-**1.** Download the latest release of Firebase integration mods clicking [here](https://github.com/CapOliveiraBr/DBM-Firebase/releases) (note: [DBM Mods](https://github.com/Discord-Bot-Maker-Mods/DBM-Mods) must be installed first).<br>
+**1.** Download the latest release of Firebase integration mods clicking [here](https://github.com/CapOliveiraBr/DBM-Firebase/archive/master.zip) (note: [DBM Mods](https://github.com/Discord-Bot-Maker-Mods/DBM-Mods) must be installed first).<br>
 **2.** With the `.zip` file downloaded, extract it and open the first folder.
 
 Looking at the folders, there will be the folder **"actions"** and **"data"**, in actions are DBM mods integrated with Firebase, and in data is where we should configure our database in our bot, there will have the file `fbConfigs.json`
