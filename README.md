@@ -84,7 +84,7 @@ You must replace each **X** for such a thing as you are saying and then just sav
 
 ![](https://i.imgur.com/fYRn462.png)
 
-# Oh yeah!
+## Oh yeah!
 
 Now your Firebase database is registered and you can now use the control, check, store and delete mods to control servers, members, and globally your DB in your DBM bot!
 
@@ -103,5 +103,5 @@ Now your Firebase database is registered and you can now use the control, check,
 - Delete Firebase Member Data
 - Delete Firebase Global Data
 
-### License
+#### License
 MIT - [CapOliveiraBr](https://github.com/CapOliveiraBr)
