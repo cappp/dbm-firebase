@@ -32,7 +32,7 @@ module.exports = {
     
     subtitle: function(data) {
         const members = ['Mentioned User', 'Command Author', 'Temp Variable', 'Server Variable', 'Global Variable'];
-        return `${members[parseInt(data.member)]} - ${data.dataName}`;
+        return `Member: ${members[parseInt(data.member)]} - Data Name: ${data.dataName}`;
     },
     
     // Who made the mod (If not set, defaults to "DBM Mods")
