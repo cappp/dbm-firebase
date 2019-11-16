@@ -68,7 +68,7 @@ You must replace each **X** for such a thing as you are saying and then just sav
 
 ![](https://i.imgur.com/7K25Hhi.png)
 
-**3.** Scroll down and you will see the apps of your project (create one if you don't have one), go to where is **"Firebase SDK snippet"** and select the **"Config"** option and copy the value of each field of that and paste it into your `fbConfigs.json`.
+**3.** Scroll down and you will see the apps of your project (create one if you don't have one), go to where is **"Firebase SDK snippet"** and select the **"Config"** option and copy the value of each field of that and paste it into your `fbConfig.json`.
 
 ![](https://i.imgur.com/3JHCaLW.png)
 
