@@ -47,7 +47,7 @@ Looking at the folders, there will be the folder **"actions"** and **"data"**, i
 ### Installing and setting data folder
 
 **1.** Copy the data folder to your DBM bot main directory (replace existing files).<br>
-**2.** In the folder of your bot, now go to the data folder and open the file `fbConfigs.json`, in it you will see something like this:<br>
+**2.** In the folder of your bot, now go to the data folder and open the file `fbConfig.json`, in it you will see something like this:<br>
 ```json
 {
     "apiKey": "X",
