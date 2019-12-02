@@ -141,28 +141,31 @@ module.exports = {
             </div><br><br><br>
             <div style="padding-top: 16px;">
                 <h3><u>Mini Docs</u></h3>
-                    <b>member</b> - Member object in list.
+                    <b>member</b> - Member object in list.<br>
                 <h4><u>Properties</u></h4>
-                    <b>.tag</b> - Show the member tag.<br>
-                    <b>Example:</b> <span id="code">member.tag</span><br><br>
-                    <b>.username</b> - Show the member username.<br>
-                    <b>Example:</b> <span id="code">member.username</span><br><br>
-                    <b>.id</b> - Show the member id.<br>
-                    <b>Example:</b> <span id="code">member.id</span><br><br>
-                    <b>Show more here:</b> <span class="wrexlink" data-url="https://discord.js.org/#/docs/main/stable/class/User">https://discord.js.org/#/docs/main/stable/class/User</span>
+                    <i>Note: do not use .user if global data is enabled</i><br><br>
+                    <b>.user.tag</b> - Show the member tag.<br>
+                    <b>Example:</b> <span id="code">member.user.tag</span><br><br>
+                    <b>.user.username</b> - Show the member username.<br>
+                    <b>Example:</b> <span id="code">member.user.username</span><br><br>
+                    <b>.user.id</b> - Show the member id.<br>
+                    <b>Example:</b> <span id="code">member.user.id</span><br><br>
+                    <b>.displayName</b> - Show the member display name.<br>
+                    <b>Example:</b> <span id="code">member.displayName</span><br><br>
+                    <b>Show more here:</b><br><span class="wrexlink" data-url="https://discord.js.org/#/docs/main/stable/class/User">https://discord.js.org/#/docs/main/stable/class/User</span><br><span class="wrexlink2" data-url2="https://discord.js.org/#/docs/main/stable/class/GuildMember">https://discord.js.org/#/docs/main/stable/class/GuildMember</span>
                 <h4><u>Others</u></h4>
                     <b>dataName</b> - Data name of the list.<br>
                     <b>dataValue</b> - Data value for each registered member.
             </div>
         </div>
         <style>
-            span.wrexlink {
+            span.wrexlink, span.wrexlink2 {
                 color: #99b3ff;
                 text-decoration: underline;
                 cursor: pointer;
             }
 
-            span.wrexlink:hover { 
+            span.wrexlink:hover, span.wrexlink2:hover { 
                 color: #4676b9;
             }
 
@@ -189,7 +192,7 @@ module.exports = {
         const {document} = this;
 
         var wrexlinks = document.getElementsByClassName("wrexlink")
-        for(var x = 0; x < wrexlinks.length; x++) {
+        for (var x = 0; x < wrexlinks.length; x++) {
           
           var wrexlink = wrexlinks[x];
           var url = wrexlink.getAttribute('data-url');   
@@ -199,6 +202,21 @@ module.exports = {
               e.stopImmediatePropagation();
               console.log("Launching URL: [" + url + "] in your default browser.")
               require('child_process').execSync('start ' + url);
+            });
+          }   
+        }
+
+        var wrexlinks2 = document.getElementsByClassName("wrexlink2")
+        for (var x2 = 0; x2 < wrexlinks2.length; x2++) {
+          
+          var wrexlink2 = wrexlinks2[x2];
+          var url2 = wrexlink2.getAttribute('data-url2');   
+          if (url2) {
+            wrexlink2.setAttribute("title", url2);
+            wrexlink2.addEventListener("click", function(e2){
+              e2.stopImmediatePropagation();
+              console.log("Launching URL: [" + url2 + "] in your default browser.")
+              require('child_process').execSync('start ' + url2);
             });
           }   
         } 
@@ -242,10 +260,16 @@ module.exports = {
             if (!dataName) return;
 
             firebase.initializeApp(fbConfig);
-            firebase.database().ref(`data/players`).orderByKey().limitToFirst(resultLimit).once('value')
+            firebase.database().ref(`data/players`).orderByKey().once('value')
                 .then(i => {
                     i.forEach(players => {
                         if (players.child(dataName).val() === null) return;
+
+                        if (showDataGlobally === 0) {
+                            if (cache.server.members.map(m => m.id).indexOf(players.key) == -1) return;
+                        } else {
+                            if (client.users.map(u => u.id).indexOf(players.key) == -1) return;
+                        }
 
                         list.push({
                             userID: players.key,
@@ -257,10 +281,10 @@ module.exports = {
 
                     switch(sortType) {
                         case 0:
-                            listType = sort(list).desc(u => u.value);
+                            listType = sort(list).desc(u => parseInt(u.value));
                             break;
                         case 1:
-                            listType = sort(list).asc(u => u.value);
+                            listType = sort(list).asc(u => parseInt(u.value));
                             break;
                         case 2:
                             listType = list;
@@ -272,7 +296,7 @@ module.exports = {
 
                         switch(showDataGlobally) {
                             case 0:
-                                member = cache.server.members.get(listType[position].userID).user;
+                                member = cache.server.members.get(listType[position].userID);
                                 break;
                             case 1:
                                 member = client.users.get(listType[position].userID);
@@ -283,6 +307,7 @@ module.exports = {
                         position++;
                     });
 
+                    resultList.length = resultLimit;
                     resultList = resultList.join('\n');
 
                     if (resultList !== undefined) {
@@ -296,11 +321,17 @@ module.exports = {
             if (err.code == 'app/duplicate-app') {
                 if (!dataName) return;
 
-                firebase.database().ref(`data/players`).orderByKey().limitToFirst(resultLimit).once('value')
+                firebase.database().ref(`data/players`).orderByKey().once('value')
                     .then(i => {
                         i.forEach(players => {
                             if (players.child(dataName).val() === null) return;
 
+                            if (showDataGlobally === 0) {
+                                if (cache.server.members.map(m => m.id).indexOf(players.key) == -1) return;
+                            } else {
+                                if (client.users.map(u => u.id).indexOf(players.key) == -1) return;
+                            }
+                            
                             list.push({
                                 userID: players.key,
                                 value: players.child(dataName).val()
@@ -311,10 +342,10 @@ module.exports = {
 
                         switch(sortType) {
                             case 0:
-                                listType = sort(list).desc(u => u.value);
+                                listType = sort(list).desc(u => parseInt(u.value));
                                 break;
                             case 1:
-                                listType = sort(list).asc(u => u.value);
+                                listType = sort(list).asc(u => parseInt(u.value));
                                 break;
                             case 2:
                                 listType = list;
@@ -326,7 +357,7 @@ module.exports = {
 
                             switch(showDataGlobally) {
                                 case 0:
-                                    member = cache.server.members.get(listType[position].userID).user;
+                                    member = cache.server.members.get(listType[position].userID);
                                     break;
                                 case 1:
                                     member = client.users.get(listType[position].userID);
@@ -337,6 +368,7 @@ module.exports = {
                             position++;
                         });
 
+                        resultList.length = resultLimit;
                         resultList = resultList.join('\n');
 
                         if (resultList !== undefined) {
