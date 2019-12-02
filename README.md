@@ -104,6 +104,7 @@ Now your Firebase database is registered and you can now use the control, check,
 - Delete Firebase Server Data
 - Delete Firebase Member Data
 - Delete Firebase Global Data
+- Store Firebase Member Data List
 
 #### License
 MIT - [CapOliveiraBr](https://github.com/CapOliveiraBr)
