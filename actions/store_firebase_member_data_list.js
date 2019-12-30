@@ -49,10 +49,10 @@ module.exports = {
     depends_on_mods: ["WrexMODS"],
 
     //---------------------------------------------------------------------
-	// Action Storage Function
-	//
-	// Stores the relevant variable info for the editor.
-	//---------------------------------------------------------------------
+    // Action Storage Function
+    //
+    // Stores the relevant variable info for the editor.
+    //---------------------------------------------------------------------
 
 	variableStorage: function (data, varType) {
 		const type = parseInt(data.storage);
