@@ -107,4 +107,5 @@ Now your Firebase database is registered and you can now use the control, check,
 - Store Firebase Member Data List
 
 #### License
-MIT - [CapOliveiraBr](https://github.com/CapOliveiraBr)
+
+[MIT](LICENSE) - [CapOliveiraBr](https://github.com/CapOliveiraBr)
