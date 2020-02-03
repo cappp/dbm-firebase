@@ -1,4 +1,4 @@
-# <img src="https://silversunset.net/dbm/favicon.ico" width="30px"> Discord Bot Maker Firebase <img src="https://www.gstatic.com/devrel-devsite/v8f8534a0a1ecc2d4b6b0eedc98ca141494b3da7c06f14d0cf00ab540f6319b4f/firebase/images/favicon.png">
+# <img src="https://silversunset.net/dbm/favicon.ico" width="30px"> Discord Bot Maker Firebase <img src="https://www.gstatic.com/devrel-devsite/prod/vcd1bbe5dda31d2b800805cc4c730b0229f847f2d108be33386b6e78644e79178/firebase/images/favicon.png">
 
 Use the Firebase database on DBM easily and completely. You will be able to control your Firebase DB using the mods I made for DBM that are very easy to use.
 
