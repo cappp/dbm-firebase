@@ -110,4 +110,4 @@ Now your Firebase database is registered and you can now use the control, check,
 
 #### License
 
-[MIT](LICENSE) - [CapOliveiraBr](https://github.com/CapOliveiraBr)
+[**MIT**](LICENSE) - [**@CapOliveiraBr**](https://github.com/CapOliveiraBr)
