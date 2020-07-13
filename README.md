@@ -5,7 +5,9 @@
   <p>
     Use the Firebase database on DBM easily and completely.
   </p>
-  <img src="https://img.shields.io/github/license/cappp/dbm-firebase?style=for-the-badge">
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/github/license/cappp/dbm-firebase?style=for-the-badge">
+  </a>
 </div>
 
 ### Table of contents
