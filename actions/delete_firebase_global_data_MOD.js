@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.4
+*  DBM Firebase - v1.1.5
 *  https://github.com/cappp/dbm-firebase
 *
 */
