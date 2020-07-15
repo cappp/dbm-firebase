@@ -8,6 +8,7 @@
   <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/cappp/dbm-firebase?style=for-the-badge">
   </a>
+  <img src="https://img.shields.io/github/v/release/cappp/dbm-firebase?style=for-the-badge">
 </div>
 
 ### Table of contents
