@@ -5,6 +5,7 @@
   <p>
     Use the Firebase database on DBM easily and completely.
   </p>
+  <img src="https://img.shields.io/github/v/release/cappp/dbm-firebase?style=for-the-badge">
   <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/cappp/dbm-firebase?style=for-the-badge">
   </a>
@@ -16,7 +17,7 @@
   - [Configuring DBM bot](#configuring-dbm-bot)
     - [Installing actions folder](#installing-actions-folder)
     - [Installing and setting data folder](#installing-and-setting-data-folder)
-    - [Where find the X values of my Firebase project?](#where-to-find-the-x-values-of-my-firebase-project)
+    - [Where find the X values of my Firebase project?](#where-find-the-x-values-of-my-firebase-project)
   - [Creating database](#creating-databse)
   - [All finished](#all-finished)
 
@@ -82,11 +83,11 @@ You must replace each **X** for such a thing as you are saying and then just sav
 **1.** Access your chosen Firebase project.<br>
 **2.** Go to where your project settings are.
 
-![](https://i.imgur.com/7K25Hhi.png)
+![](https://i.imgur.com/ClT2STE.png)
 
 **3.** Scroll down and you will see the apps of your project (create one if you don't have one), go to where is **"Firebase SDK snippet"** and select the **"Config"** option and **copy the value of each field** of that and paste it into your `fbConfig.json`.
 
-![](https://i.imgur.com/3JHCaLW.png)
+![](https://i.imgur.com/kDTm8B6.png)
 
 ### Creating database
 
