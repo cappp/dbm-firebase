@@ -86,7 +86,7 @@ You must replace each **X** for such a thing as you are saying and then just sav
 
 **3.** Scroll down and you will see the apps of your project (create one if you don't have one), go to where is **"Firebase SDK snippet"** and select the **"Config"** option and **copy the value of each field** of that and paste it into your `fbConfig.json`.
 
-![](https://imgur.com/a/ARjGd7B)
+![](https://i.imgur.com/kDTm8B6.png)
 
 ### Creating database
 
