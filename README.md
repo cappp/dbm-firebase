@@ -16,7 +16,7 @@
   - [Configuring DBM bot](#configuring-dbm-bot)
     - [Installing actions folder](#installing-actions-folder)
     - [Installing and setting data folder](#installing-and-setting-data-folder)
-    - [Where find the X values of my Firebase project?](#where-to-find-the-x-values-of-my-firebase-project)
+    - [Where find the X values of my Firebase project?](#where-find-the-x-values-of-my-firebase-project)
   - [Creating database](#creating-databse)
   - [All finished](#all-finished)
 
