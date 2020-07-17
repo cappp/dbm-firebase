@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.5
+*  DBM Firebase - v1.1.6
 *  https://github.com/cappp/dbm-firebase
 *
 */
@@ -82,7 +82,7 @@ module.exports = {
       return console.log(
         'You do not have the fbConfig.json file in your bot to continue use Firebase. Visit this repository to learn how to do it: https://github.com/cappp/dbm-firebase'
       );
-		}
+    }
 		
     const fbConfig = JSON.parse(
       fs.readFileSync(
