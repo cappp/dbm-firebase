@@ -124,3 +124,7 @@ Now your Firebase database is registered and you can now use the control, check,
 - Delete Firebase Member Data
 - Delete Firebase Global Data
 - Store Firebase Member Data List
+
+- Issues
+
+If you want to make a suggestion or report a possible bug, open an [issue](https://github.com/cappp/dbm-firebase/issues)
