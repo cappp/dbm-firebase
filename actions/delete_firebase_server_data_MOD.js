@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.5
+*  DBM Firebase - v1.1.6
 *  https://github.com/cappp/dbm-firebase
 *
 */
@@ -9,7 +9,7 @@ module.exports = {
   name: 'Delete Firebase Server Data',
   section: 'Other Stuff',
 
-  subtitle (data) {
+  subtitle(data) {
     const servers = [
       'Current Server',
       'Temp Variable',

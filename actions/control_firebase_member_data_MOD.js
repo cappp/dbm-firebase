@@ -67,7 +67,7 @@ module.exports = {
   },
 
   init() {
-		const { glob, document } = this;
+    const { glob, document } = this;
 		
     glob.memberChange(
       document.getElementById('member'), 
@@ -77,32 +77,32 @@ module.exports = {
     
   async action(cache) {
     const fs = require('fs');
-		const firebase = this.getMods().require('firebase');
+    const firebase = this.getMods().require('firebase');
 		
     if (!fs.existsSync('./data/fbConfig.json')) {
       return console.log(
         'You do not have the fbConfig.json file in your bot to continue use Firebase. Visit this repository to learn how to do it: https://github.com/cappp/dbm-firebase'
       );
-		}
+    }
 		
     const fbConfig = JSON.parse(
       fs.readFileSync(
         './data/fbConfig.json', 
         'utf-8'
       )
-		);
-
-		if (firebase.apps.length === 0) {
-			firebase.initializeApp(fbConfig);
-		}
+    );
+	  
+    if (firebase.apps.length === 0) {
+      firebase.initializeApp(fbConfig);
+    }
 		
     const data = cache.actions[cache.index];
     const memberType = parseInt(data.member);
     const varName = this.evalMessage(data.varName, cache);
     const member = this.getMember(memberType, varName, cache);
     const dataName = this.evalMessage(data.dataName, cache);
-		const controlType = parseInt(data.controlType);
-		const value = this.eval(
+    const controlType = parseInt(data.controlType);
+    const value = this.eval(
       this.evalMessage(data.value, cache), 
       cache
     );
@@ -110,7 +110,7 @@ module.exports = {
     if (member && dataName && value) {
       const membersData = firebase
         .database()
-				.ref(`data/players/${member.id}/${dataName}`);
+	.ref(`data/players/${member.id}/${dataName}`);
 				
       if (controlType === 0) {
         await membersData.set(value);
@@ -118,7 +118,7 @@ module.exports = {
         const data = (await membersData.once('value')).val();
         await membersData.set(data + value);
       }
-		}
+    }
 		
     this.callNextAction(cache);
   },

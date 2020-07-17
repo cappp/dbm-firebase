@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.5
+*  DBM Firebase - v1.1.6
 *  https://github.com/cappp/dbm-firebase
 *
 */
@@ -88,13 +88,13 @@ module.exports = {
   
   init() {
     const { glob, document } = this;
-
-	  glob.serverChange(
+	  
+    glob.serverChange(
       document.getElementById('server'), 
       'varNameContainer'
     );
-	  glob.onChangeTrue(document.getElementById('iftrue'));
-	  glob.onChangeFalse(document.getElementById('iffalse'));
+    glob.onChangeTrue(document.getElementById('iftrue'));
+    glob.onChangeFalse(document.getElementById('iffalse'));
   },
 
   async action(cache) {
