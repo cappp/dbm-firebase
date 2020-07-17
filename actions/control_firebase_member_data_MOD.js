@@ -67,7 +67,7 @@ module.exports = {
   },
 
   init() {
-		const { glob, document } = this;
+	const { glob, document } = this;
 		
     glob.memberChange(
       document.getElementById('member'), 
@@ -77,7 +77,7 @@ module.exports = {
     
   async action(cache) {
     const fs = require('fs');
-		const firebase = this.getMods().require('firebase');
+	const firebase = this.getMods().require('firebase');
 		
     if (!fs.existsSync('./data/fbConfig.json')) {
       return console.log(
