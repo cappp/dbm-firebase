@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.5
+*  DBM Firebase - v1.1.7
 *  https://github.com/cappp/dbm-firebase
 *
 */
@@ -85,15 +85,13 @@ module.exports = {
       );
     }
 		
-    const fbConfig = JSON.parse(
-      fs.readFileSync(
-        './data/fbConfig.json', 
-        'utf-8'
-      )
-    );
-	  
     if (firebase.apps.length === 0) {
-      firebase.initializeApp(fbConfig);
+      firebase.initializeApp(JSON.parse(
+        fs.readFileSync(
+          './data/fbConfig.json', 
+          'utf-8'
+        )
+      ));
     }
 		
     const data = cache.actions[cache.index];

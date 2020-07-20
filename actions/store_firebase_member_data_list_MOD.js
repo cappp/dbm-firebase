@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.6
+*  DBM Firebase - v1.1.7
 *  https://github.com/cappp/dbm-firebase
 *
 */
@@ -149,9 +149,11 @@ module.exports = {
   },
 
   async action(cache) {
+    const mods = this.getMods();
+
     const fs = require('fs');
-    const firebase = this.getMods().require('firebase');
-    const sort = this.getMods().require('fast-sort');
+    const firebase = mods.require('firebase');
+    const sort = mods.require('fast-sort');
 
     if (!fs.existsSync('./data/fbConfig.json')) {
       return console.log(
@@ -159,15 +161,13 @@ module.exports = {
       );
     }
     
-    const fbConfig = JSON.parse(
-      fs.readFileSync(
-        './data/fbConfig.json', 
-        'utf-8'
-      )
-    );
-
     if (firebase.apps.length === 0) {
-      firebase.initializeApp(fbConfig);
+      firebase.initializeApp(JSON.parse(
+        fs.readFileSync(
+          './data/fbConfig.json', 
+          'utf-8'
+        )
+      ));
     }
 
     const client = this.getDBM().Bot.bot;
