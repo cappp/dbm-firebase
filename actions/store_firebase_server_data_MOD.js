@@ -1,6 +1,6 @@
 /*
 *
-*  DBM Firebase - v1.1.7
+*  DBM Firebase - v1.1.8
 *  https://github.com/cappp/dbm-firebase
 *
 */
@@ -138,7 +138,7 @@ module.exports = {
         serverData.val() : 
         defVal
       
-      if (result) {
+      if (result !== undefined) {
         const storage = parseInt(data.storage);
         const varName2 = this.evalMessage(data.varName2, cache);
 
